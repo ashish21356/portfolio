@@ -1,0 +1,363 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ashish Wadbude | Developer Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* CSS Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #0056b3;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            margin: 20px 0;
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #ffffff;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #333;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -10px;
+            width: 60px;
+            height: 3px;
+            background-color: #007bff;
+            transform: translateX(-50%);
+        }
+
+        /* Skills Section */
+        .skills-list {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .skills-list li {
+            background-color: #fff;
+            padding: 15px 25px;
+            margin: 10px;
+            border-radius: 30px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .skills-list li:hover {
+            transform: scale(1.1);
+        }
+
+        /* Technologies Section */
+        .technologies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            justify-items: center;
+        }
+
+        .technology {
+            background-color: #fff;
+            padding: 20px;
+            margin: 10px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s;
+        }
+
+        .technology:hover {
+            box-shadow: 0 18px 90px rgba(6, 12, 124, 0.2);
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .project {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Contact Section */
+        .contact form {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .contact form label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 1.1em;
+        }
+
+        .contact form input, .contact form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1.1em;
+        }
+
+        .contact form button {
+            background-color: #007bff;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact form button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #282c34;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 1.1em;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+
+            .hero p {
+                font-size: 1.2em;
+            }
+
+            .section {
+                padding: 40px 10px;
+            }
+
+            .section-title {
+                font-size: 2em;
+            }
+        }
+
+        /* Education Section */
+.education-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.education-item {
+    background-color: #fff;
+    padding: 15px 25px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: left;
+}
+
+.education-item h3 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.education-item p {
+    margin-top: 5px;
+    color: #555;
+    font-size: 1.1em;
+}
+/* Profile Picture Styles */
+.profile-pic {
+            width: 20%;
+            height: auto;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="https://github.com/ashish21356.png" class="profile-pic"   alt="Ashish Wadbude" class="profile-pic">
+        <h1>Hello, I'm Ashish Wadbude</h1>
+        <p>Full Stack Developer | Programmer | Tech Enthusiast</p>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about">
+        <h2 class="section-title">About Me</h2>
+        <p>Hello! I'm a passionate full-stack developer with a knack for building efficient, scalable, and robust applications. My experience ranges from front-end interfaces to backend services, ensuring seamless and performant web experiences.</p>
+    </section>
+<!-- Education Section -->
+<section class="section education">
+    <h2 class="section-title">Education</h2>
+    <div class="education-list">
+        <div class="education-item">
+            <h3>Bachelor of Engineering (B.E.) in Mechanical Engineering</h3>
+            <p><strong>Institution:</strong> Jabalpur Engineering College</p>
+            <p><strong>Duration:</strong> 2017 - 2020</p>
+            <p><strong>Grade:</strong> 7.41/10</p>
+            <p><strong>Location:</strong> Jabalpur, Madhya Pradesh, 482011, India</p>
+        </div>
+        
+        
+        
+    </div>
+</section>
+
+    <!-- Skills Section -->
+    <section class="section skills">
+        <h2 class="section-title">Skills</h2>
+        <ul class="skills-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>PHP</li>
+            <li>MySQL</li>
+            <li>Bootstrap</li>
+            <li>Ajax</li>
+            <li>JSON</li>
+            <li>REST APIs</li>
+            <li>Custom MVC Framework</li>
+        </ul>
+    </section>
+
+    <!-- Technologies Section -->
+    <section class="section technologies">
+        <h2 class="section-title">Technologies</h2>
+        <div class="technologies-grid">
+            <div class="technology">
+                <h4>Frontend</h4>
+                <p>HTML, CSS, JavaScript, Bootstrap</p>
+            </div>
+            <div class="technology">
+                <h4>Backend</h4>
+                <p>PHP, Custom MVC Framework</p>
+            </div>
+            <div class="technology">
+                <h4>Databases</h4>
+                <p>MySQL</p>
+            </div>
+            <div class="technology">
+                <h4>APIs & Integrations</h4>
+                <p>REST APIs, Integrations</p>
+            </div>
+            <div class="technology">
+                <h4>Tools</h4>
+                <p>Postman</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+            <div class="project">
+                <h3>E-Commerce Project</h3>
+                <p>A comprehensive e-commerce project addressing both administrative and customer needs for seamless online shopping.</p>
+                <a href="https://github.com/ashish21356/E-Commerse-Project" target="_blank">View Project</a>
+            </div>
+            <div class="project">
+                <h3>Traffic Light Control System</h3>
+                <p>An interactive system with four signals, allowing users to control the operation sequence and intervals.</p>
+                <a href="https://github.com/ashish21356/Traffic-Light-Control-System" target="_blank">View Project</a>
+            </div>
+            <div class="project">
+                <h3>Duraface Solutions Web App</h3>
+                <p>A web application designed for Duraface Solutions, showcasing their product offerings and services.</p>
+                <a href="https://github.com/ashish21356/duraface-solutions" target="_blank">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Ashish Wadbude | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
+
